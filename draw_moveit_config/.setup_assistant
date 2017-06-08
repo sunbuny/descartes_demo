@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: draw_support
+    relative_path: urdf/draw_robot.xacro
+  SRDF:
+    relative_path: config/draw_robot.srdf
+  CONFIG:
+    author_name: "sunbin "
+    author_email: sunbuny@163.com
+    generated_timestamp: 1496720174

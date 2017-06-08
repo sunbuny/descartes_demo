@@ -1,0 +1,8 @@
+prefix=/home/sun/ws_draw/src/draw/cmake-build-debug/devel
+
+Name: draw
+Description: Description of draw
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/sun/ws_draw/src/draw/cmake-build-debug/devel/lib 
+Requires: 

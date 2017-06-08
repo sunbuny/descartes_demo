@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/sun/ws_draw/src/draw/cmake-build-debug/devel/setup.sh
