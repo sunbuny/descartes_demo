@@ -1,7 +1,7 @@
 //
 // Created by sun on 17-6-8.
 //
-
+//abb_irb2400_manipulator_kinematics/IKFastKinematicsPlugin
 #include "draw.h"
 namespace draw {
     DemoDraw::DemoDraw() {
@@ -42,7 +42,7 @@ namespace draw {
             double angle = 0;
             angle = 2 * 3.1415 / num_points * i;
             //
-            pose = Eigen::Translation3d( 0.1 * cos(angle),  0.1 * sin(angle), 1.2125 );
+            pose = Eigen::Translation3d( 0.7+0.1 * cos(angle),  0.1 * sin(angle), 1.3);
             tmp = pose * Eigen::Translation3d(0, 0, 0.11);
             vposes.push_back(tmp);
             poses.push_back(pose);
@@ -59,6 +59,7 @@ namespace draw {
             exit(-1);
         }
         publishPosesMarkers(vposes);
+        ROS_INFO_STREAM("Published the visual curve!!!");
         traj.clear();
         traj.reserve(poses.size());
         for (unsigned int i = 0; i < poses.size(); i++) {
@@ -107,6 +108,8 @@ namespace draw {
 
         }
     }
+
+
 
     trajectory_msgs::JointTrajectory
     DemoDraw::fromDescartesToJointTrajectory(const TrajectoryVec &trajectory,
@@ -243,6 +246,20 @@ namespace draw {
 
         marker_publisher_.publish(markers_msg);
 
+    }
+
+    void DemoDraw::moveHome(descartes_core::TrajectoryPtPtr &start) {
+        std::vector<double> seed_pose(robot_model_ptr_->getDOF());
+        std::vector<double> start_pose;
+        moveit::planning_interface::MoveGroup group("manipulator");
+        start->getNominalJointPose(seed_pose, *robot_model_ptr_, start_pose);
+        group.setJointValueTarget(start_pose);
+        group.setPlanningTime(10.0f);
+        moveit_msgs::MoveItErrorCodes result = group.move();
+        if(result.val != result.SUCCESS){
+            ROS_ERROR_STREAM("Move to Start pose failed");
+            exit(-1);
+        }
     }
 }
 

@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   descartes_planner
   trajectory_msgs
   moveit_msgs
+  moveit_ros_planning_interface
 )
 
 catkin_package()
@@ -19,6 +20,7 @@ catkin_package()
 include_directories(
         include
   ${catkin_INCLUDE_DIRS}
+        ${EIGEN3_INCLUDE_DIR}
 )
 
  add_executable(draw src/tutorial1.cpp)
@@ -31,9 +33,19 @@ add_executable(draw2 src/main.cpp include/draw.h src/draw.cpp)
 target_link_libraries(draw2
         ${catkin_LIBRARIES}
         )
+
+add_executable(keyctrl src/keyctrl.cpp )
+target_link_libraries(keyctrl
+        ${catkin_LIBRARIES}
+        )
+add_executable(getkey src/getKey.cpp)
+add_executable(testMoveit src/testMoveit.cpp)
+target_link_libraries(testMoveit
+        ${catkin_LIBRARIES}
+        )
 #set_target_properties(draw
-#  PROPERTIES OUTPUT_NAME tutorial1
-#  PREFIX "")
+##  PROPERTIES OUTPUT_NAME tutorial1
+##  PREFIX "")
 
 
 #############

@@ -20,6 +20,7 @@
 // Includes the planner we will be using
 #include <eigen_conversions/eigen_msg.h>
 #include <descartes_planner/dense_planner.h>
+#include <moveit/move_group_interface/move_group.h>
 namespace draw {
     typedef std::vector <descartes_core::TrajectoryPtPtr> TrajectoryVec;
     typedef TrajectoryVec::const_iterator TrajectoryIter;
@@ -48,6 +49,8 @@ namespace draw {
         void planPath(TrajectoryVec& input_traj,TrajectoryVec&  output_traj);
 
         void runPath(const TrajectoryVec& traj);
+
+        void moveHome(descartes_core::TrajectoryPtPtr &start);
 
     protected:
         static bool createCircle(int num_points, EigenSTL::vector_Affine3d &poses,EigenSTL::vector_Affine3d &vposes);

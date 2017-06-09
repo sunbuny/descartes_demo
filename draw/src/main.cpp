@@ -24,7 +24,7 @@ int main(int argc, char** argv){
         draw.generateTrajectory(traj);
         draw::TrajectoryVec output_traj;
         draw.planPath(traj,output_traj);
-
+        draw.moveHome(output_traj[0]);
         draw.runPath(output_traj);
     }
 }

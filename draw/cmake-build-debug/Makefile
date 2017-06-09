@@ -166,6 +166,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named keyctrl
+
+# Build rule for target.
+keyctrl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyctrl
+.PHONY : keyctrl
+
+# fast build rule for target.
+keyctrl/fast:
+	$(MAKE) -f CMakeFiles/keyctrl.dir/build.make CMakeFiles/keyctrl.dir/build
+.PHONY : keyctrl/fast
+
+#=============================================================================
+# Target rules for targets named moveit_ros_manipulation_gencfg
+
+# Build rule for target.
+moveit_ros_manipulation_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 moveit_ros_manipulation_gencfg
+.PHONY : moveit_ros_manipulation_gencfg
+
+# fast build rule for target.
+moveit_ros_manipulation_gencfg/fast:
+	$(MAKE) -f CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
+.PHONY : moveit_ros_manipulation_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named moveit_ros_planning_gencfg
+
+# Build rule for target.
+moveit_ros_planning_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 moveit_ros_planning_gencfg
+.PHONY : moveit_ros_planning_gencfg
+
+# fast build rule for target.
+moveit_ros_planning_gencfg/fast:
+	$(MAKE) -f CMakeFiles/moveit_ros_planning_gencfg.dir/build.make CMakeFiles/moveit_ros_planning_gencfg.dir/build
+.PHONY : moveit_ros_planning_gencfg/fast
+
+#=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_py
 
 # Build rule for target.
@@ -491,6 +530,19 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named testMoveit
+
+# Build rule for target.
+testMoveit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testMoveit
+.PHONY : testMoveit
+
+# fast build rule for target.
+testMoveit/fast:
+	$(MAKE) -f CMakeFiles/testMoveit.dir/build.make CMakeFiles/testMoveit.dir/build
+.PHONY : testMoveit/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -593,6 +645,19 @@ roscpp_generate_messages_py: cmake_check_build_system
 roscpp_generate_messages_py/fast:
 	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named getkey
+
+# Build rule for target.
+getkey: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 getkey
+.PHONY : getkey
+
+# fast build rule for target.
+getkey/fast:
+	$(MAKE) -f CMakeFiles/getkey.dir/build.make CMakeFiles/getkey.dir/build
+.PHONY : getkey/fast
 
 #=============================================================================
 # Target rules for targets named doxygen
@@ -907,6 +972,60 @@ src/draw.cpp.s:
 	$(MAKE) -f CMakeFiles/draw2.dir/build.make CMakeFiles/draw2.dir/src/draw.cpp.s
 .PHONY : src/draw.cpp.s
 
+src/getKey.o: src/getKey.cpp.o
+
+.PHONY : src/getKey.o
+
+# target to build an object file
+src/getKey.cpp.o:
+	$(MAKE) -f CMakeFiles/getkey.dir/build.make CMakeFiles/getkey.dir/src/getKey.cpp.o
+.PHONY : src/getKey.cpp.o
+
+src/getKey.i: src/getKey.cpp.i
+
+.PHONY : src/getKey.i
+
+# target to preprocess a source file
+src/getKey.cpp.i:
+	$(MAKE) -f CMakeFiles/getkey.dir/build.make CMakeFiles/getkey.dir/src/getKey.cpp.i
+.PHONY : src/getKey.cpp.i
+
+src/getKey.s: src/getKey.cpp.s
+
+.PHONY : src/getKey.s
+
+# target to generate assembly for a file
+src/getKey.cpp.s:
+	$(MAKE) -f CMakeFiles/getkey.dir/build.make CMakeFiles/getkey.dir/src/getKey.cpp.s
+.PHONY : src/getKey.cpp.s
+
+src/keyctrl.o: src/keyctrl.cpp.o
+
+.PHONY : src/keyctrl.o
+
+# target to build an object file
+src/keyctrl.cpp.o:
+	$(MAKE) -f CMakeFiles/keyctrl.dir/build.make CMakeFiles/keyctrl.dir/src/keyctrl.cpp.o
+.PHONY : src/keyctrl.cpp.o
+
+src/keyctrl.i: src/keyctrl.cpp.i
+
+.PHONY : src/keyctrl.i
+
+# target to preprocess a source file
+src/keyctrl.cpp.i:
+	$(MAKE) -f CMakeFiles/keyctrl.dir/build.make CMakeFiles/keyctrl.dir/src/keyctrl.cpp.i
+.PHONY : src/keyctrl.cpp.i
+
+src/keyctrl.s: src/keyctrl.cpp.s
+
+.PHONY : src/keyctrl.s
+
+# target to generate assembly for a file
+src/keyctrl.cpp.s:
+	$(MAKE) -f CMakeFiles/keyctrl.dir/build.make CMakeFiles/keyctrl.dir/src/keyctrl.cpp.s
+.PHONY : src/keyctrl.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -933,6 +1052,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/draw2.dir/build.make CMakeFiles/draw2.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/testMoveit.o: src/testMoveit.cpp.o
+
+.PHONY : src/testMoveit.o
+
+# target to build an object file
+src/testMoveit.cpp.o:
+	$(MAKE) -f CMakeFiles/testMoveit.dir/build.make CMakeFiles/testMoveit.dir/src/testMoveit.cpp.o
+.PHONY : src/testMoveit.cpp.o
+
+src/testMoveit.i: src/testMoveit.cpp.i
+
+.PHONY : src/testMoveit.i
+
+# target to preprocess a source file
+src/testMoveit.cpp.i:
+	$(MAKE) -f CMakeFiles/testMoveit.dir/build.make CMakeFiles/testMoveit.dir/src/testMoveit.cpp.i
+.PHONY : src/testMoveit.cpp.i
+
+src/testMoveit.s: src/testMoveit.cpp.s
+
+.PHONY : src/testMoveit.s
+
+# target to generate assembly for a file
+src/testMoveit.cpp.s:
+	$(MAKE) -f CMakeFiles/testMoveit.dir/build.make CMakeFiles/testMoveit.dir/src/testMoveit.cpp.s
+.PHONY : src/testMoveit.cpp.s
 
 src/tutorial1.o: src/tutorial1.cpp.o
 
@@ -972,6 +1118,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... keyctrl"
+	@echo "... moveit_ros_manipulation_gencfg"
+	@echo "... moveit_ros_planning_gencfg"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_cpp"
@@ -998,6 +1147,7 @@ help:
 	@echo "... shape_msgs_generate_messages_lisp"
 	@echo "... object_recognition_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... testMoveit"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... shape_msgs_generate_messages_cpp"
@@ -1006,6 +1156,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... getkey"
 	@echo "... doxygen"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... moveit_msgs_generate_messages_py"
@@ -1032,9 +1183,18 @@ help:
 	@echo "... src/draw.o"
 	@echo "... src/draw.i"
 	@echo "... src/draw.s"
+	@echo "... src/getKey.o"
+	@echo "... src/getKey.i"
+	@echo "... src/getKey.s"
+	@echo "... src/keyctrl.o"
+	@echo "... src/keyctrl.i"
+	@echo "... src/keyctrl.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/testMoveit.o"
+	@echo "... src/testMoveit.i"
+	@echo "... src/testMoveit.s"
 	@echo "... src/tutorial1.o"
 	@echo "... src/tutorial1.i"
 	@echo "... src/tutorial1.s"
