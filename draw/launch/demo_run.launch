@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-
-  <node name="tutorial1" pkg="draw" type="draw2" output="screen" />
+  <param name="/robot_description_kinematics/manipulator/kinematics_solver" type="str" value="abb_irb2400_manipulator_kinematics/IKFastKinematicsPlugin" />
+  <node name="draw" pkg="draw" type="draw2" output="screen" />
 
 </launch>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="/robot_description_kinematics/manipulator/kinematics_solver" type="str" value="kdl_kinematics_plugin/KDLKinematicsPlugin" />
+    <node name="key_ctrl" pkg="draw" type="keyctrl" output="screen" />
+
+</launch>

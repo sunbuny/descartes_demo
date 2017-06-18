@@ -37,7 +37,7 @@ namespace draw {
 
     bool DemoDraw::createCircle(int num_points,  EigenSTL::vector_Affine3d &poses,
                                 EigenSTL::vector_Affine3d &vposes) {
-        for (unsigned int i = 0; i <= num_points; ++i) {
+        for (unsigned int i = 0; i < num_points; ++i) {
             Eigen::Affine3d pose, tmp;
             double angle = 0;
             angle = 2 * 3.1415 / num_points * i;

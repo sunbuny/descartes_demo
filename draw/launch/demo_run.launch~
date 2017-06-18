@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
 
-  <node name="tutorial1" pkg="descartes_tutorials" type="tutorial1" output="screen" />
+  <node name="tutorial1" pkg="draw" type="draw2" output="screen" />
 
 </launch>
