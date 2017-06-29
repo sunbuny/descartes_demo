@@ -5,7 +5,9 @@ git clone 该项目后catkin_make即可
 source 该项目的环境变量之后，运行：
 ```
 roslaunch draw demo_setup.launch  // 运行irb2400的moveit仿真环境
+任务一 控制机器人画一个圈
 roslaunch draw demo_run.launch    // 控制机器人画一个圆
+任务二 使用键盘控制机器人
 roslaunch draw demo_key_ctrl.launch  //使用键盘控制机器人
 -------use W A S D to control-----------------------
 -------W move alone world x axis 20 cm--------------------

@@ -1,2 +1,0 @@
-Options: 
-CMake: 3.7.2@/home/sun/APP/clion-2016.2.3/bin/cmake/bin/cmake

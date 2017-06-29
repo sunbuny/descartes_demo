@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++0x -g   CMakeFiles/getkey.dir/src/getKey.cpp.o  -o devel/lib/draw/getkey -rdynamic 
