@@ -39,7 +39,15 @@ sudo apt-get -y install build-essential
 echo ""
 echo "ROS Installation Done!"
 #echo "You can create your catkin workspace now. https://wiki.ros.org/catkin/Tutorials/create_a_workspace"
+
+sudo apt-get install ros-indigo-moveit
+sudo apt-get install ros-indigo-abb
+sudo apt-get install ros-indigo-industrial-moveit
 mkdir -p ws/src
 cd ws/src
 catkin_init_workspace 
-git clone git@github.com:sunbuny/descartes_demo.git
+git clone https://github.com/sunbuny/descartes_demo.git
+git clone https://github.com/ros-industrial-consortium/descartes.git
+cd ..
+catkin_make
+source devel/setup.bash 

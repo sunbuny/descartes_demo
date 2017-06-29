@@ -1,8 +1,8 @@
 ## 华东师范大学-机器人学课程大作业
 ## 安装
-git clone 该项目后catkin_make即可
+git clone 该项目后, sh setup.sh自动构建项目环境
 ## 运行
-source 该项目的环境变量之后，运行：
+命令行输入
 ```
 roslaunch draw demo_setup.launch  // 运行irb2400的moveit仿真环境
 任务一 控制机器人画一个圈
